@@ -44,7 +44,7 @@ div#controller {
 
 div.boxcontent {
     position:absolute;
-    width:3000px;
+    width:4000px;
 }
 
 div.content {
@@ -73,6 +73,16 @@ div.leftbar p {
 
 div.leftbar a {
     color: rgb(255, 255, 255);
+}
+
+div.leftbar ul {
+    padding-left:33px;
+    list-style: disc;
+}
+
+div.leftbar li a {
+    padding:6px 0;
+    font-family:Pfennig;
 }
 
 div#taggrid {
