@@ -8,8 +8,14 @@ body {
     font-family:Pfennig;
 }
 
+div#mainwrapper {
+    width:960px;
+    margin:0 auto;
+}
+
 div#header {
-    margin-top:33px;
+    margin-top:13px;
+    padding:13px 0;
 }
 
 div#header h1 {
@@ -29,12 +35,47 @@ span#name {
     color: rgb(42, 42, 42);
 }
 
-div.leftbar {
+div#controller {
+    position:relative;
+    width:960px;
+    height:475px;
+    overflow:hidden;
+}
+
+div.boxcontent {
     position:absolute;
-    height:425px;
+    width:3000px;
+}
+
+div.content {
+    float:left;
+    height:465px;
+    width:960px;
+}
+
+div.imgbox {
+}
+
+div.leftbar {
+    height:435px;
+    padding:0px 23px; 
+    position:absolute;
     background: black;
     opacity:0.66;
+    width:333px;
+}
 
+div.leftbar p {
+    font-family:Pfennig;
+    font-size:0.9em;
+    margin-top:7px;
+    padding:7px 0;
+    text-indent:13px;
+    line-height:1.2em;
+}
+
+div.leftbar a {
+    color: rgb(255, 255, 255);
 }
 
 div#taggrid {
@@ -43,55 +84,29 @@ div#taggrid {
     text-align:center;
 }
 
-div#taggrid span {
-    margin:13px;
-    padding:3px 7px;
-}
-
-span.tag1 {
-    font-size:66px;
-    color: rgb(255, 255, 255);
-}
-
-span.tag2 {
-    font-size:55px;
-    color: rgb(213, 213, 213);
-}
-
-span.tag3 {
-    font-size:44px;
-    color: rgb(166, 166, 166);
-}
-
-span.tag4 {
-    font-size:33px;
-    color: rgb(133, 133, 133);
-}
-
-div.controller {
-    height:465px;
-    overflow:hidden;
-    margin-top:23px;
-    margin-bottom:13px;
-}
-
 span.menudesc {
-    height:40px;
     text-align:center;
+    position:absolute;
+    width:960px;
+    padding:3px 0;
     text-transform:lowercase;
     color: rgb(113, 113, 113);
-    padding:13px 0;
     font-family:Pfennig;
     font-weight:100;
     letter-spacing:2px;
 }
 
-div.boxcontent {
-    position:relative;
-    width:500%;
+div#menu {
+    position:absolute;
+    text-align:center;
+    width:960px;
+    margin:0 auto;
 }
 
-div#menu ul {
+div#menu ul, div#menu li {
+    margin:0;
+    padding:0;
+    display:inline;
     list-style: none;
 }
 
@@ -141,6 +156,32 @@ div.textblock {
     color: rgb(213, 213, 213);
     vertical-align:center;
     text-indent:7px;
-    padding:13px;
     font-size:23px;
+}
+
+div#taggrid span {
+}
+
+span.tag1 {
+    font-size:66px;
+    color: rgb(255, 255, 255);
+}
+
+span.tag2 {
+    font-size:55px;
+    color: rgb(213, 213, 213);
+}
+
+span.tag3 {
+    font-size:44px;
+    color: rgb(166, 166, 166);
+}
+
+span.tag4 {
+    font-size:33px;
+    color: rgb(133, 133, 133);
+}
+
+span.strike {
+    text-decoration:line-through;
 }
