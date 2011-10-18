@@ -76,11 +76,14 @@ div.leftbar {
     width:333px;
 }
 
+div.leftbar p:first-child {
+    margin-top:33px;
+}
+
 div.leftbar p {
     font-family:Pfennig;
     font-size:0.9em;
-    margin-top:7px;
-    padding:7px 0;
+    padding:13px 0;
     text-indent:13px;
     line-height:1.2em;
 }
@@ -101,7 +104,6 @@ div.leftbar li a {
 
 div#taggrid {
     font-family:Pfennig;
-    text-shadow:0px 1px 0px white;
     text-align:center;
 }
 
@@ -176,12 +178,8 @@ div#menu a.selected {
 
 div.textblock {
     color: rgb(213, 213, 213);
-    vertical-align:center;
     text-indent:7px;
     font-size:23px;
-}
-
-div#taggrid span {
 }
 
 span.tag1 {
