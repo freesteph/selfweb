@@ -42,6 +42,10 @@ div#controller {
     overflow:hidden;
 }
 
+div#controller img {
+    border-radius:13px;
+}
+
 div.boxcontent {
     position:absolute;
     width:4000px;
@@ -54,6 +58,7 @@ div.content {
 }
 
 div.leftbar {
+    border-radius:13px 0px 0px 13px;
     height:435px;
     padding:0px 23px; 
     position:absolute;
