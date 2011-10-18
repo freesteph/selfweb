@@ -8,8 +8,8 @@ $(document).ready(function() {
 	    }
 	    $("div#menu a").removeClass("selected");
 	    $(element).addClass("selected");
-	    $("div.boxcontent").animate({left:-index*960}, 1000);
-	    $("div.controldesc").animate({top:-index*51}, 500);
+	    $("div.boxcontent").animate({left:-index*960},{"duration":666,
+							   "easing":"swing"});
 	});
     });
 });
