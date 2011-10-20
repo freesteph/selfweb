@@ -172,8 +172,17 @@ div#menu a.selected {
     background-color: rgb(100, 150, 233);
     background-image: none;
     border-bottom:1px solid rgb(100, 100, 100);
+    border-top:1px solid rgb(133, 133, 133);
     color:white;
     text-shadow:0 1px 0px rgb(100, 100, 100);
+}
+
+div#menu li:first-child a.selected {
+        border-left:1px solid rgb(133, 133, 133);
+}
+
+div#menu li:last-child a.selected {
+        border-right:1px solid rgb(133, 133, 133);
 }
 
 div.textblock {
