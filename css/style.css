@@ -40,6 +40,7 @@ span#pretext {
 }
 
 span#name {
+    text-shadow:0px;
     font-weight:bold;
     color: rgb(42, 42, 42);
 }
