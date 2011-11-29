@@ -13,205 +13,98 @@
 }
 
 body {
-    background:#fff;
-    font-family:Pfennig;
+    background: url("../img/noise.png") top left;
+    color: rgb(120, 120, 120);
+    font-family: serif;
 }
 
-div#mainwrapper {
-    width:960px;
-    margin:0 auto;
-}
-
-div#header {
-    margin-top:13px;
-    padding:13px 0;
-}
-
-div#header h1 {
-    letter-spacing:1px;
-    font-family:Pfennig;
-    font-size:33px;
-    color: rgb(133, 133, 133);
-    text-shadow:0px 1px 0px rgb(200, 200, 200);
-}
-
-span#pretext {
-    color: rgb(200, 200, 200);
-}
-
-span#name {
-    text-shadow:0px;
-    font-weight:bold;
-    color: rgb(42, 42, 42);
-}
-
-div#controller {
+div#wrapper {
     position:relative;
-    width:960px;
-    height:475px;
-    overflow:hidden;
+    margin:66px auto;
 }
 
-div#controller img {
-    border-radius:13px;
-}
-
-div.boxcontent {
+div#picframe {
     position:absolute;
-    width:5000px;
+    right:0;
+    top:0;
 }
 
-div.content {
-    float:left;
-    height:465px;
-    width:960px;
-}
-
-div.leftbar {
-    border-radius:13px 0px 0px 13px;
-    height:435px;
-    padding:0px 23px; 
-    position:absolute;
-    background: black;
-    opacity:0.66;
-    width:333px;
-}
-
-div.leftbar p:first-child {
-    margin-top:33px;
-}
-
-div.leftbar p {
-    font-family:Pfennig;
-    font-size:0.9em;
+blockquote#topquote, span#author {
+    font-family: serif;
+    font-style: italic;
+    font-size: 36px;
+    letter-spacing: px;
+    color: rgb(90, 90, 90);
+    text-shadow:0px -2px 1px rgb(18, 18, 18),
+    0px 1px 0px rgb(33, 33, 33);
     padding:13px 0;
-    text-indent:13px;
+}
+
+span#author {
+    font-size:24px;
+    text-align:right;
+}
+
+div#intro {
+    margin-top:18px;
+    padding:18px 0;
+    border:1px solid rgba(154, 154, 154, 0.1);
+    box-shadow:0px 3px 18px rgba(18, 18, 18, 0.42);
+    background: rgba(84, 42, 120, 0.24);
+    border-radius: 6px;
+}
+
+p:first-child {
+    text-indent:24px;
+}
+
+div#intro p {
+    font-family: Pfennig;
+    padding:12px 24px;
     line-height:1.2em;
+    font-size:18px;
+    text-align:justify;
 }
 
-div.leftbar a {
-    color: rgb(255, 255, 255);
+p strong {
+    font-weight: bold;
 }
 
-div.leftbar ul {
-    padding-left:33px;
-    list-style: disc;
+div#footer {
+    background-color: rgba(12, 12, 12, 0.5);
+    border-top:1px solid rgba(133, 133, 133, 0.2);
+    height:210px;
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    overflow:hidden;
+    padding-top:18px;
 }
 
-div.leftbar li a {
-    padding:6px 0;
+div#footer p {
     font-family:Pfennig;
+    line-height:18px;
+    letter-spacing:1px;
+    text-shadow:0px -1px 0px black;
 }
 
-div#taggrid {
-    font-family:Pfennig;
+p#outro {
+    text-align:right;
+}
+
+p#middletro {
     text-align:center;
 }
 
-span.menudesc {
-    display:block;
-    text-align:center;
-    position:absolute;
-    width:960px;
-    padding:3px 0;
+p#endtro {
+    text-align:left;
+}
+
+p#copyright {
     text-transform:lowercase;
-    color: rgb(113, 113, 113);
-    font-family:Pfennig;
-    font-weight:100;
-    letter-spacing:2px;
-}
-
-div#menu {
-    position:absolute;
+    margin-top:32px;
     text-align:center;
-    width:960px;
-    margin:0 auto;
-}
-
-div#menu ul, div#menu li {
-    margin:0;
-    padding:0;
-    display:inline;
-    list-style: none;
-}
-
-div#menu li {
-    display:inline;
-}
-
-div#menu li:first-child a {
-    border-radius:0px 0px 0px 13px;
-    border-left:1px solid rgb(213, 213, 213);
-}
-
-div#menu li:last-child a {
-    border-radius:0px 0px 13px 0;
-}
-
-div#menu a {
-    font-variant:small-caps;
-    text-decoration:none;
+    text-shadow:0px -1px black;
     color: rgb(42, 42, 42);
-    background-image:-moz-linear-gradient(top center, rgb(233, 233, 233), rgb(200, 200, 200));
-    background-color: rgb(233, 233, 233);
-    border:1px solid rgb(213, 213, 213);
-    border-left:0;
-    padding:7px 23px;
-    font-size:1.3em;
-    color: rgb(100, 100, 100);
-    text-shadow:0 1px 0px white;
-    text-align:center;
-}
-
-div#menu a:hover {
-    border-bottom:1px solid rgb(166, 166, 166);
-    background-color: rgb(213, 213, 213);
-    color: #000;
-}
-
-div#menu a.selected {
-    background-color: rgb(100, 150, 233);
-    background-image: none;
-    border-bottom:1px solid rgb(100, 100, 100);
-    border-top:1px solid rgb(133, 133, 133);
-    color:white;
-    text-shadow:0 1px 0px rgb(100, 100, 100);
-}
-
-div#menu li:first-child a.selected {
-        border-left:1px solid rgb(133, 133, 133);
-}
-
-div#menu li:last-child a.selected {
-        border-right:1px solid rgb(133, 133, 133);
-}
-
-div.textblock {
-    color: rgb(213, 213, 213);
-    text-indent:7px;
-    font-size:23px;
-}
-
-span.tag1 {
-    font-size:66px;
-    color: rgb(255, 255, 255);
-}
-
-span.tag2 {
-    font-size:55px;
-    color: rgb(213, 213, 213);
-}
-
-span.tag3 {
-    font-size:44px;
-    color: rgb(166, 166, 166);
-}
-
-span.tag4 {
-    font-size:33px;
-    color: rgb(133, 133, 133);
-}
-
-span.strike {
-    text-decoration:line-through;
 }
