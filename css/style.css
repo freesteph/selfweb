@@ -50,7 +50,7 @@ div#intro {
     padding:18px 0;
     border:1px solid rgba(154, 154, 154, 0.1);
     box-shadow:0px 3px 18px rgba(18, 18, 18, 0.42);
-    background: rgba(84, 42, 120, 0.24);
+    background: rgba(120, 120, 120, 1.0);
     border-radius: 6px;
 }
 
@@ -59,6 +59,8 @@ p:first-child {
 }
 
 div#intro p {
+    color: rgb(36, 36, 36);
+    text-shadow:0px 1px 0px rgba(240, 240, 240, 0.28);
     font-family: Pfennig;
     padding:12px 24px;
     line-height:1.2em;
@@ -85,13 +87,23 @@ div#menu li {
 
 div#menu li a {
     text-decoration:none;
-    text-shadow:0px 1px 0px rgba(180, 180, 180, 0.3);
+    text-shadow:0px 1px 0px rgba(240, 240, 240, 0.24);
     color: rgb(24, 24, 24);
     padding:12px 44px;
     background-color: rgba(212, 128, 81, 0.24);
-    border:1px solid rgba(154, 154, 154, 0.2);
-    border-left:0;
-    border:right:0;
+    border-bottom:1px solid rgba(180, 180, 180, 0.12);
+    border-top:1px solid rgba(180, 180, 180, 0.36);
+}
+
+div#menu li a.selected {
+    background-color: rgba(212, 128, 81, 0.06);
+    color: rgb(90, 90, 90);
+    text-shadow:0px -1px 1px black, 0px 0px 6px rgba(240, 60, 240, 0.36);
+    border-bottom:1px solid rgba(180, 180, 180, 0.06);
+}
+
+div#menu li a.selected:hover {
+    background-color: rgba(212, 128, 81, 0.06);
 }
 
 div#menu li:first-child a {
@@ -110,13 +122,15 @@ div#footer {
     position:absolute;
     bottom:0;
     height:210px;
-    max-width:100%;
+    min-width:100%;
+    width:100%;
     padding-top:18px;
     background-color: rgba(12, 12, 12, 0.5);
     border-top:1px solid rgba(133, 133, 133, 0.2);
 }
 
 div#footer p {
+    color: rgb(72, 72, 72);
     font-family:Pfennig;
     line-height:18px;
     letter-spacing:1px;
@@ -136,10 +150,10 @@ p#endtro {
     text-align:left;
 }
 
-p#copyright {
+div#footer p#copyright {
+    color: rgb(42, 42, 42);
     text-transform:lowercase;
     margin-top:32px;
     text-align:center;
     text-shadow:0px -1px black;
-    color: rgb(42, 42, 42);
 }
