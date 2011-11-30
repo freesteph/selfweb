@@ -15,17 +15,21 @@
 body {
     background: url("../img/noise.png") top left;
     color: rgb(120, 120, 120);
-    font-family: serif;
+    font-family: Pfennig;
 }
 
 div#topwrapper {
     position:relative;
-    margin:66px auto;
+    margin:30px auto;
 }
 
 div#picframe {
     position:absolute;
     right:0;
+}
+
+div#picframe img {
+    height:540px;
 }
 
 blockquote#topquote, span#author {
@@ -120,7 +124,6 @@ div#menu li a:hover {
 div#footer {
     position:relative;
     bottom:0;
-    height:210px;
     min-width:100%;
     width:100%;
     padding-top:18px;
@@ -152,7 +155,7 @@ p#endtro {
 div#footer p#copyright {
     color: rgb(42, 42, 42);
     text-transform:lowercase;
-    margin-top:32px;
+    margin:24px 0;
     text-align:center;
     text-shadow:0px -1px black;
 }
