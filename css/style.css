@@ -16,7 +16,6 @@ body {
     background: url("../img/noise.png") top left;
     color: rgb(120, 120, 120);
     font-family: serif;
-    overflow:hidden;
 }
 
 div#topwrapper {
@@ -119,7 +118,7 @@ div#menu li a:hover {
 }
 
 div#footer {
-    position:absolute;
+    position:relative;
     bottom:0;
     height:210px;
     min-width:100%;
