@@ -16,6 +16,7 @@ body {
     background: url("../img/noise.png") top left;
     color: rgb(120, 120, 120);
     font-family: serif;
+    overflow:hidden;
 }
 
 div#wrapper {
@@ -26,7 +27,6 @@ div#wrapper {
 div#picframe {
     position:absolute;
     right:0;
-    top:0;
 }
 
 blockquote#topquote, span#author {
@@ -70,16 +70,50 @@ p strong {
     font-weight: bold;
 }
 
+div#menu {
+    margin:13px;
+    padding:24px 0;
+}
+
+div#menu ul {
+    list-style:none;
+}
+
+div#menu li {
+    display:inline;
+}
+
+div#menu li a {
+    text-decoration:none;
+    text-shadow:0px 1px 0px rgba(180, 180, 180, 0.3);
+    color: rgb(24, 24, 24);
+    padding:12px 44px;
+    background-color: rgba(212, 128, 81, 0.24);
+    border:1px solid rgba(154, 154, 154, 0.2);
+    border-left:0;
+    border:right:0;
+}
+
+div#menu li:first-child a {
+    border-radius:6px 0 0 6px;
+}
+
+div#menu li:last-child a {
+    border-radius:0 6px 6px 0;
+}
+
+div#menu li a:hover {
+    background-color: rgba(212, 128, 81, 0.4);
+}
+
 div#footer {
+    position:absolute;
+    bottom:0;
+    height:210px;
+    max-width:100%;
+    padding-top:18px;
     background-color: rgba(12, 12, 12, 0.5);
     border-top:1px solid rgba(133, 133, 133, 0.2);
-    height:210px;
-    position: absolute;
-    left:0;
-    right:0;
-    bottom:0;
-    overflow:hidden;
-    padding-top:18px;
 }
 
 div#footer p {
@@ -88,6 +122,7 @@ div#footer p {
     letter-spacing:1px;
     text-shadow:0px -1px 0px black;
 }
+
 
 p#outro {
     text-align:right;
