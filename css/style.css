@@ -19,7 +19,7 @@ body {
     overflow:hidden;
 }
 
-div#wrapper {
+div#topwrapper {
     position:relative;
     margin:66px auto;
 }
