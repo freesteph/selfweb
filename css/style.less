@@ -82,4 +82,39 @@ div.section {
 	font-size:1.3em;
 	padding:0.3em 0;
     }
+
+    & > div.event:first-child {
+	background:red;
+    }
 }
+
+div.event {
+    padding:1em;
+    background-color:rgb(233, 233, 233);
+
+    h4 {
+	display:inline;
+	text-transform:lowercase;
+	border-bottom:1px solid black;
+	font-size:1.3em;
+    }
+
+    h6 {
+	display:inline;
+	float:right;
+	letter-spacing:2px;
+	font-weight:bold;
+    }
+
+    p {
+	padding:1em 0;
+	text-align:left;
+	font-family:0.9em;
+    }
+
+    &:nth-child(even) {
+	background-color:rgb(200, 200, 200);
+    }
+
+}
+
