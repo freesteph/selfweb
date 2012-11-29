@@ -12,9 +12,7 @@
 }
 
 body {
-    margin:0 auto;
     text-align:center;
-    padding-top:3%;
     font-size:100%;
     font-family:"OpenBaskerville0.0.53";
     background:white;
@@ -46,15 +44,20 @@ span.strike {
     text-decoration:line-through;
 }
 
+#header_bg {
+    background-color:rgb(42, 42, 42);
+}
+
 header {
     max-width:32em;
     margin:0 auto;
     text-transform:lowercase;
-    padding:0 6%;
+    padding:2% 6%;
     border-bottom:1px solid rgb(220, 220, 220);
     padding-bottom:1em;
 
     h1 {
+	color:white;
 	letter-spacing:6px;
 	font-weight:100;
 	font-size:350%;
@@ -66,13 +69,21 @@ header {
 	font-weight:100;
 	font-size:130%;
 	letter-spacing:1em;
-	text-shadow:0px -1px 0px white;
     }
     
     p {
+	color:rgb(133, 133, 133);
 	font-style:italic;
     }
 
+    a {
+	background:0;
+	border:0;
+	border-bottom:1px dashed rgb(142, 142, 142);
+	color:rgb(133, 133, 133);
+	text-shadow:0;
+    }
+    
     p:nth-of-type(odd) {
 	text-align:left;
     }
@@ -179,7 +190,6 @@ footer p {
 
 @media screen and (min-width: 768px) {
     body {
-	margin:1%;
     }
 
     #main {
