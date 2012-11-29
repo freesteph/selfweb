@@ -17,7 +17,7 @@ body {
     padding-top:3%;
     font-size:100%;
     font-family:"OpenBaskerville0.0.53";
-    background:rgb(250, 250, 250);
+    background:white;
 }
 
 #main {
@@ -47,9 +47,10 @@ span.strike {
 }
 
 header {
-    max-width:90%;
+    max-width:32em;
     margin:0 auto;
     text-transform:lowercase;
+    padding:0 6%;
     border-bottom:1px solid rgb(220, 220, 220);
     padding-bottom:1em;
 
@@ -61,10 +62,11 @@ header {
     }
 
     h2 {
-	color:rgb(200, 200, 200);
+	color:rgb(100, 100, 100);
 	font-weight:100;
 	font-size:130%;
 	letter-spacing:1em;
+	text-shadow:0px -1px 0px white;
     }
     
     p {
@@ -176,11 +178,17 @@ footer p {
 }
 
 @media screen and (min-width: 768px) {
-    #main {
-	max-width:80%;
+    body {
+	margin:1%;
     }
 
-    header {
-	max-width:32em;
+    #main {
+	padding:2%;
+    }
+
+    section {
+	width:28%;
+	min-width:13em;
+	padding:2%;
     }
 }
