@@ -14,13 +14,13 @@
 body {
     text-align:center;
     font-size:100%;
-    font-family:"OpenBaskerville0.0.53";
     background:white;
+    font-family:"Liberation Serif";
 }
 
 #main {
     margin:0 auto;
-    padding:2em 0;
+    padding:6% 2%;
 }
 
 a {
@@ -49,19 +49,20 @@ span.strike {
 }
 
 header {
-    max-width:32em;
+    max-width:23em;
     margin:0 auto;
     text-transform:lowercase;
-    padding:2% 6%;
-    border-bottom:1px solid rgb(220, 220, 220);
+    padding:2% 4%;
     padding-bottom:1em;
 
     h1 {
+	font-family:"OpenBaskerville0.0.53";
 	color:white;
 	letter-spacing:6px;
 	font-weight:100;
 	font-size:350%;
 	text-transform:lowercase;
+	padding:0.3em 0;
     }
 
     h2 {
@@ -103,8 +104,8 @@ section {
     padding:0 1em;
     text-align:justify;
     font-size:1.2em;
-    line-height:1.2em;
-    width:17em;
+    line-height:133%;
+    max-width:20em;
 
     h2 {
 	text-align:center;
@@ -188,12 +189,18 @@ footer p {
     letter-spacing:0.6%;
 }
 
+@media screen and (min-width: 500px) {
+    #main {
+	padding:6%;
+    }
+}
+
 @media screen and (min-width: 768px) {
     body {
     }
 
     #main {
-	padding:2%;
+	padding:6% 10%;
     }
 
     section {
