@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'OpenBaskerville0.0.53';
+    src: url('../fonts/openbaskerville-0.0.53-webfont.eot');
+    src: url('../fonts/openbaskerville-0.0.53-webfont.eot?#iefix') format('embedded-opentype'),
+         url('.,/fonts/openbaskerville-0.0.53-webfont.woff') format('woff'),
+         url('../fonts/openbaskerville-0.0.53-webfont.ttf') format('truetype'),
+         url('../fonts/openbaskerville-0.0.53-webfont.svg#OpenBaskerville0.0.53Normal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 $dark: rgb(42, 42, 42);
 $light: rgb(242, 242, 242);
 
@@ -5,7 +16,7 @@ $light: rgb(242, 242, 242);
 body {
     margin:0;
     padding:0;
-    font-family:"Open Baskerville 0.0.53";
+    font-family:"OpenBaskerville0.0.5";
     background:lighten($dark, 66%);
 }
 

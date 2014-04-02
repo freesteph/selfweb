@@ -1,4 +1,4 @@
-$dark: rgb(42, 42, 42);
+$dark: rgb(42, 82, 42);
 $light: rgb(242, 242, 242);
 
 
@@ -102,6 +102,7 @@ section {
             z-index:-1;
             font-weight:bold;
             color:white;
+            @include transform(rotate(-17deg));
         }
     }
 }
