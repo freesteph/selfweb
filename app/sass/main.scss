@@ -1,8 +1,11 @@
+$iconSpritePath: "../images/glyphicons-halflings.png";
+$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
+
 @font-face {
     font-family: 'OpenBaskerville0.0.53';
     src: url('../fonts/openbaskerville-0.0.53-webfont.eot');
     src: url('../fonts/openbaskerville-0.0.53-webfont.eot?#iefix') format('embedded-opentype'),
-         url('.,/fonts/openbaskerville-0.0.53-webfont.woff') format('woff'),
+         url('../fonts/openbaskerville-0.0.53-webfont.woff') format('woff'),
          url('../fonts/openbaskerville-0.0.53-webfont.ttf') format('truetype'),
          url('../fonts/openbaskerville-0.0.53-webfont.svg#OpenBaskerville0.0.53Normal') format('svg');
     font-weight: normal;
@@ -12,36 +15,40 @@
 $dark: rgb(42, 42, 42);
 $light: rgb(242, 242, 242);
 
-
 body {
     margin:0;
     padding:0;
-    font-family:"OpenBaskerville0.0.5";
-    background:lighten($dark, 66%);
+    font-family:"OpenBaskerville0.0.53", serif;
+    background:url("../images/noise.png");
 }
 
 #header-background {
+    height:auto;
     text-align:center;
     background:rgba(42, 42, 42, 0.9);
-    padding:2.4em;
-    border-bottom:1px solid black;
+    border-bottom:1px solid $dark;
+    height:300px;
 }
 
+
 header {
+    padding:0 7%;
     margin:0 auto;
-    max-width:33em;
     font-size:1.1em;
     color:darken($light, 30%);
     letter-spacing:1px;
     line-height:1.3em;
-    text-shadow:0px 1px 0px black;
+    text-shadow:0px -1px 0px black;
+    max-width:42em;
 
     h1 {
+        letter-spacing:7px;
+        text-shadow:0px 1px 13px $dark;
         color:white;
-        font-size:4.2em;
+        font-size:333%;
         font-weight:100;
         text-transform:lowercase;
-        padding:0.42em 0;
+        padding:0.33em 0;
     }
 
     h2 {
@@ -61,33 +68,44 @@ header {
     }
 
     a {
+        background:none;
+        border-bottom:1px darken($light, 42%) dashed;
         color:$light;
         padding-bottom:0.33em;
-        border-bottom:1px darken($light, 42%) dashed;
+
+        &:hover, &:focus, &:active, &:visited {
+            color:$light;
+        }
+
+        &:hover {
+            border-bottom:1px dashed darken($light, 13%);
+        }
     }
+}
+
+img#background {
+    position:relative;
+    max-width:100%;
+    z-index:-100;
+    margin-top:-555px;
 }
 
 #main-wrapper {
+    position:absolute;
+    top:300px;
     max-width:42em;
-    background:rgba(242, 242, 242, 0.66);
-    float:left;
+    background:rgba(242, 242, 242, 0.69);
     border-right:1px solid lighten($dark, 33%);
-
-    img#background {
-        top:-300px;
-        position:absolute;
-        z-index:-100;
-        max-width:100%;
-    }
 }
 
 section {
-    margin:2.4em 12%;
-    font-size:1.3em;
+    margin:2.4em 7%;
+    font-size:1.42em;
     line-height:1.4em;
     max-width:33em;
 
     h3 {
+        background:$light;
         font-variant:small-caps;
         font-weight:100;
         text-shadow:0px 1px 0px $light;
@@ -119,12 +137,65 @@ section {
 
 footer {
     clear:both;
-    text-transform:lowercase;
     text-align:center;
     letter-spacing:1px;
     padding-top:0.42em;
-    border:1px solid black;
+    border-top:1px solid lighten($dark, 3%);
     background:$dark;
     color:darken($light, 30%);
     text-shadow:0px 1px 0px black;
+}
+
+emph {
+    background:rgba(242, 242, 242, 0.4);
+    padding:0.0666em;
+}
+
+.company {
+    display:inline-block;
+    box-shadow:1px 1px 3px $dark;
+    padding:0 0.33em;
+    background:$light;
+    border:0;
+
+    &:hover {
+        color:lighten(#0088cc, 7%);
+    }
+}
+
+#fillin {
+    max-width:33%;
+    margin-right:7%;
+    float:right;
+    text-align:right;
+    font-size:1.5em;
+    color:darken($light, 33%);
+    text-shadow:0px -1px 0px black;
+    line-height:1.2em;
+
+    p {
+        margin:2em 0;
+    }
+
+    img {
+        box-shadow:3px 3px 13px black;
+    }
+}
+
+a {
+    display:inline-block;
+    color:#0088cc;
+    border-bottom:1px dashed #0088cc;
+    text-decoration:none;
+
+    &:hover {
+        text-decoration:none;
+    }
+}
+
+ul {
+    li {
+        list-style-type:disc;
+        padding:0.42em 0;
+    }
 }

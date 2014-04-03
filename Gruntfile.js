@@ -28,7 +28,7 @@ module.exports = function (grunt) {
             dist: {
                 files: [{
                     expand: true,
-                    cwd: '<%= config.app %>/sass',
+                    cwd: '<%= config.app %>/styles',
                     src: ['*.scss'],
                     dest: '<%= config.app %>/styles',
                     ext: '.css'
@@ -61,7 +61,7 @@ module.exports = function (grunt) {
                 tasks: ['newer:copy:styles', 'autoprefixer']
             },
             sass: {
-                files: ['<%= config.app %>/sass/{,*/}*.scss'],
+                files: ['<%= config.app %>/styles/{,*/}*.scss'],
                 tasks: ['sass'],
                 options: {
                     livereload: true

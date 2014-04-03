@@ -1,36 +1,53 @@
+$iconSpritePath: "../images/glyphicons-halflings.png";
+$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
+
+@font-face {
+    font-family: 'OpenBaskerville0.0.53';
+    src: url('../fonts/openbaskerville-0.0.53-webfont.eot');
+    src: url('../fonts/openbaskerville-0.0.53-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/openbaskerville-0.0.53-webfont.woff') format('woff'),
+         url('../fonts/openbaskerville-0.0.53-webfont.ttf') format('truetype'),
+         url('../fonts/openbaskerville-0.0.53-webfont.svg#OpenBaskerville0.0.53Normal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 $dark: rgb(42, 42, 42);
 $light: rgb(242, 242, 242);
-
 
 body {
     margin:0;
     padding:0;
-    font-family:"Open Baskerville 0.0.53";
-    background:lighten($dark, 66%);
+    font-family:"OpenBaskerville0.0.53", serif;
+    background:url("../images/noise.png");
 }
 
 #header-background {
-    text-align:center;
+    overflow:auto;
     background:rgba(42, 42, 42, 0.9);
-    padding:2.4em;
-    border-bottom:1px solid black;
+    border-bottom:1px solid $dark;
 }
 
+
 header {
+    text-align:center;
+    padding:0 7%;
     margin:0 auto;
-    max-width:33em;
-    font-size:1.1em;
+    font-size:1.3em;
     color:darken($light, 30%);
     letter-spacing:1px;
     line-height:1.3em;
-    text-shadow:0px 1px 0px black;
+    text-shadow:0px -1px 0px black;
+    max-width:23em;
 
     h1 {
+        letter-spacing:7px;
+        text-shadow:0px 1px 13px $dark;
         color:white;
-        font-size:4.2em;
+        font-size:333%;
         font-weight:100;
         text-transform:lowercase;
-        padding:0.42em 0;
+        padding:0.33em 0;
     }
 
     h2 {
@@ -50,46 +67,57 @@ header {
     }
 
     a {
-        color:$light;
-        padding-bottom:0.33em;
+        background:none;
         border-bottom:1px darken($light, 42%) dashed;
+        color:$light;
+
+        &:hover, &:focus, &:active, &:visited {
+            color:$light;
+        }
+
+        &:hover {
+            border-bottom:1px dashed darken($light, 13%);
+        }
     }
+}
+
+img#background {
+    position:absolute;
+    max-width:100%;
+    z-index:-100;
+    margin-top:-555px;
 }
 
 #main-wrapper {
-    max-width:42em;
-    background:rgba(242, 242, 242, 0.66);
     float:left;
+    background:rgba(0, 0, 0, 0.8);
     border-right:1px solid lighten($dark, 33%);
-
-    img#background {
-        top:-300px;
-        position:absolute;
-        z-index:-100;
-        max-width:100%;
-    }
+    margin:0 auto;
+    max-width:42em;
 }
 
 section {
-    margin:2.4em 12%;
-    font-size:1.3em;
+    color:#AAA;
+
+    margin:2.4em 7%;
+    font-size:1.77em;
+    text-align:center;
     line-height:1.4em;
-    max-width:33em;
 
     h3 {
+        font-size:1.7em;
+        color:white;
         font-variant:small-caps;
         font-weight:100;
-        text-shadow:0px 1px 0px $light;
-        border:1px solid lighten($dark, 42%);
-        box-shadow:3px 3px 0px lighten($dark, 13%);
-        display:inline-block;
-        padding:0 0.42em;
+        border-bottom:1px dashed lighten($dark, 13%);
+        display:block;
+        padding:0.42em 0;
         margin:0.42em 0;
         letter-spacing:2px;
     }
 
     p {
-        position:relative;
+        text-align:justify;
         margin:1.3em 0;
 
         span.date {
@@ -98,7 +126,6 @@ section {
             text-shadow:0px 1px 12px black;
             position:absolute;
             line-height:2em;
-            font-size:3em;
             z-index:-1;
             font-weight:bold;
             color:white;
@@ -106,14 +133,25 @@ section {
     }
 }
 
-footer {
-    clear:both;
-    text-transform:lowercase;
-    text-align:center;
-    letter-spacing:1px;
-    padding-top:0.42em;
-    border:1px solid black;
-    background:$dark;
-    color:darken($light, 30%);
-    text-shadow:0px 1px 0px black;
+emph {
+    background:rgba(242, 242, 242, 0.4);
+    padding:0.0666em;
+}
+
+a {
+    color:#0088cc;
+    padding-bottom:4px;
+    border-bottom:1px dashed #0088cc;
+    text-decoration:none;
+
+    &:hover {
+        border-bottom:1px solid #0088cc;
+    }
+}
+
+ul {
+    li {
+        list-style-type:disc;
+        padding:0.42em 0;
+    }
 }
