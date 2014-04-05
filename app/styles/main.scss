@@ -45,7 +45,7 @@ img#background {
 
 main {
     text-shadow:0px 1px 0px black;
-    border:1px solid black;
+    border:1px solid rgba(0, 0, 0, 0.42);
     background:rgba(0, 0, 0, 0.42);
     text-align:center;
     color:white;
@@ -54,7 +54,7 @@ main {
     z-index:1;
     font-weight:100;
     font-size:1.3em;
-    padding:0 3em;
+    padding:1.6em 3em;
     position:relative;
     height:100%;
     max-width:50%;
@@ -68,7 +68,7 @@ main {
         padding-bottom:2em;
     }
 
-    p#bottom {
+    #bottom {
         position:absolute;
         text-align:center;
         width:100%;
