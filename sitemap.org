@@ -1,0 +1,4 @@
+#+TITLE: Sitemap for project notes
+
+- [[file:theindex.org][Stéphane Maniaci's website]]
+- [[file:another-website-update.org][another-website-update]]

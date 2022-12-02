@@ -1,0 +1,12 @@
+#+TITLE: Home
+
+Hi. My name is Stéphane.
+
+It’s pronounced “Stefan”. Not “Stéphanie”. I get that the é is
+disturbing but it’s just the French spelling. If you want to type it
+on a Mac, you have to go ~Alt + e~, then e again. If you want to type it
+on a phone, you long-press the e key.
+
++I live in London and I’m a software engineer+ I live in Paris nowadays.
+
+I try and maintain a blog and you can always [[mailto:stephane.maniaci@gmail.com][e-mail me]]. Maybe.
