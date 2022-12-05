@@ -1,0 +1,64 @@
+#+TITLE: Docker-compose networking in Fedora 32
+#+DATE: [2020-04-01 Wed]
+
+** Edit #1
+<2020-04-29 Wed>
+
+Someone kindly contributed a nicer solution to this:
+
+#+BEGIN_QUOTE
+Hope this helps. I had the same issue, and this fixes it. Just set
+firewalld back to iptables.
+
+https://pastebin.com/Zq3Gev7w
+#+END_QUOTE
+
+** Edit #2
+<2020-08-11 mar.>
+
+I stumbled upon this article[fn:4] from Fedora magazine which precisely
+explains what is going on with the whole issue. I would **strongly
+advise following their recommendations** rather than my hack.
+
+https://fedoramagazine.org/docker-and-fedora-32/
+
+It's unfortunate they put out the article so late (June 26th when
+Fedora 32 was released on April 28) but at least there is a clear
+explanation and workaround it now. Happy hacking!
+
+[fn:4]: https://fedoramagazine.org/docker-and-fedora-32/
+
+* Docker-compose networking in Fedora 32
+  :PROPERTIES:
+  :EXPORT_DATE: <2020-04-01 Wed>
+  :END:
+
+I recently upgraded to the Fedora 32 Beta release. I've had a great
+time so far but there is one minor pain point that took me a bit of
+time to figure out: Docker Compose containers can't talk to each other
+anymore.
+
+After a bit of research it turns out the answer is simple: Fedora is
+now defaulting to nftables for firewalld[fn:1]. Don't ask me what
+that actually means, I have no idea. Until then, that is why Docker
+Compose containers aren't able to talk to each other: the new format
+of these firewall rules is not observed by Docker, so therefore the
+traffic is blocked even within the containers.
+
+The only solution I've found for the moment is temporarily disabling
+~firewalld~ which isn't ideal at all but I couldn't see anything else
+to it - the other solution seemed to be manually adding specific
+ports[fn:2].
+
+Another article[fn:3] suggests that restarting docker after ~firewalld~
+writes its rules would do the trick but that didn't do it either on my
+system.
+
+So in the meantime I just disable ~firewalld~ with ~systemctl~, until
+something better comes up.
+
+See also: https://github.com/firewalld/firewalld/issues/461.
+
+[fn:1] https://fedoraproject.org/wiki/Changes/firewalld_default_to_nftables
+[fn:2] https://github.com/firewalld/firewalld/issues/416#issuecomment-448604755
+[fn:3] https://success.docker.com/article/why-am-i-having-network-problems-after-firewalld-is-restarted

@@ -1,5 +1,0 @@
-#+TITLE: This is a new blog post
-
-* It has a description
-
-Some header, some text, etc.

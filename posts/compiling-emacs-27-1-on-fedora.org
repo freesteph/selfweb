@@ -1,0 +1,133 @@
+#+TITLE: Compiling Emacs 27.1 on Fedora 32
+#+DATE: [2020-08-11 Tue]
+
+[[https://lists.gnu.org/archive/html/emacs-devel/2020-08/msg00237.html][Emacs 27.1 is out!]] It's another great release and has been behaving
+rather well from my experience. If you're curious about giving it a
+go, here's how to install on Fedora 32, assuming you're running Fedora
+Workstation and building the GTK+ frontend:
+
+** Getting the release
+
+#+BEGIN_SRC shell
+cd ~/Downloads # or any folder of your choice
+curl -L -O https://ftpmirror.gnu.org/emacs/emacs-27.1.tar.xz
+tar xf emacs-27.1.tar.xz && cd emacs-27.1
+#+END_SRC
+
+** Installing deps
+
+Emacs requires some basic libraries installed, which I've ironed out
+to these:
+
+#+BEGIN_SRC shell
+sudo dnf install -y \
+        make \
+        automake \
+        gcc \
+        gcc-c++ \
+        kernel-devel \
+        gtk3-devel \
+        libjpeg-devel \
+        libXpm-devel \
+        giflib-devel \
+        libtiff-devel \
+        gnutls-devel \
+        ncurses-devel
+#+END_SRC
+
+** Configuration flags
+
+*** ~--with-cairo~
+
+Emacs can use Cairo for drawing; it's disabled by default because
+considered experimental but a [[https://lists.gnu.org/archive/html/emacs-devel/2019-06/msg00633.html][thread from last year]] was already
+considering making it the default. I use it without problems.
+
+*** ~--with-json~
+
+Emacs ships with much faster JSON handling, through the [[https://digip.org/jansson/][jansson
+library]]. It's enabled by default (so we don't actually need to specify
+it) **but** if you dont' have the library installed, it will silently
+skip it.
+
+#+BEGIN_SRC shell
+sudo dnf install -y jansson-devel
+#+END_SRC
+
+
+*** ~--with-librsvg~
+
+In a similar fashion to JSON, Emacs enables support for SVG by default
+but will not install it if you're missing the underlying library.
+
+#+BEGIN_SRC shell
+sudo dnf install -y librsvg2-devel
+#+END_SRC
+
+** Configure & install
+
+That's enough for me, so we just need to go ahead and install it.
+
+#+BEGIN_SRC shell
+./configure --with-json --with-cairo --with-librsvg
+make
+sudo make install
+#+END_SRC
+
+Run ~emacs --version~, make sure you're on 27.1 and
+off you go!
+
+Enjoy Emacs.
+
+** Afterword
+
+To make sure I got this right without relying on my current system
+(which is full of bits and bobs) I built a simple Docker image from
+Fedora 32 (with the added Workstation group) and checked my
+instructions there. For reference:
+
+#+BEGIN_SRC shell
+FROM fedora:32
+
+WORKDIR /tmp/emacs
+
+RUN dnf update -y
+
+RUN dnf group install "Fedora Workstation" --skip-broken -y
+
+RUN dnf install -y \
+        make \
+        automake \
+        gcc \
+        gcc-c++ \
+        kernel-devel \
+        gtk3-devel \
+        libjpeg-devel \
+        libXpm-devel \
+        giflib-devel \
+        libtiff-devel \
+        gnutls-devel \
+        ncurses-devel \
+        jansson-devel \
+        librsvg2-devel
+
+RUN curl -L -O https://ftpmirror.gnu.org/emacs/emacs-27.1.tar.xz && \
+        tar  xf emacs-27.1.tar.xz && \
+        cd emacs-27.1
+
+WORKDIR ./emacs-27.1
+
+RUN ./configure --with-cairo --with-json --with-librsvg
+
+RUN make
+RUN make install
+
+CMD emacs
+#+END_SRC
+
+
+** Revision history
+
+*** [2020-08-12 Wed]
+
+Someone on Reddit kindly [[https://www.reddit.com/r/emacs/comments/i7wckl/compiling_emacs_271_on_fedora_32/g15phug/][suggested ~librsvg~ as well]].

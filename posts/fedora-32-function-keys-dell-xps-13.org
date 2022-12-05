@@ -1,0 +1,15 @@
+#+TITLE: Fedora on Dell XPS 13: restoring the function keys
+
+I always wonder what happened when I loose my function keys (volume
+up/down, pause, forward, backward, etc) and have to specifically type
+the ~Fn~ key to get them to work.
+
+It turns out this is probably not due to my distro upgrade but a
+mistype somewhere: I found on this bug[fn:1] that typing ~Fn~ + ~ESC~
+swaps the lock of the Fn keys (i.e whether you can just press them or
+have to use the Fn toggle).
+
+I am now going to try and revert the mnemonics of the last 6 months
+without it, and hope it helps someone make it quicker.
+
+[fn:1] https://bugzilla.redhat.com/show_bug.cgi?id=1645352#c4

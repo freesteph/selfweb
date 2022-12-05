@@ -1,0 +1,105 @@
+#+TITLE: On software ownership
+
+Software is hard to build: it requires a lot of attention and because
+it's written by humans it necessarily includes a notion of style. This
+in turns generate a lot of friction between software engineers within
+a same codebase because nobody writes code the same way and nobody
+wants to admit to the others style. The idea of writing "one" code has
+a collective mind isn't particularly seductive either.
+
+-----
+
+Over lunch I thought of rather dark but interesting model to develop
+software: the *Famous Flames Superformance Pattern*.
+
+James Brown, also known as the hardest working man in the show
+business (make sure to check out the Live At the Apollo 1963 where you
+can hear [[https://youtu.be/uLp42_RacFw][Fats Gonder introduce the man himself]] under this famous
+nickname) played with his band the Famous Flames.
+
+The Famous Flames are one of the tightest band I've ever heard. They
+won't miss a beat, or half a beat, because they're playing for James
+Brown and he's got more soul than all the soul that's happened in
+music to this day.
+
+Now the other reason they're really tight, is because James Brown was
+completely mad. He had incredibly high standards and expectations for
+his band and so he terrorised most of them, notably through the use of
+systematic fining on a missed note, unpolished shoes, etc, etc.
+
+During shows, no matter how ecstatic the crowd was, he would instantly
+(and discreetly) extend a finger to signal a faulting musician, and it
+meant that musician would see his check cut off by 5 or 10 dollars at
+the end of the night. That's _per_ mistake.
+
+On the live album I mentioned above, the "price per finger" was
+between 50 and a 100 dollars, according to Bobby Byrd.
+
+How does this relate to software?
+
+-----
+
+It feels like developing software together can be excruciating
+sometimes. People have different opinions and it's really hard and
+exhausting to get to the bottom of metaphysical arguments about naming
+things, punctuation, software patterns, tooling, git strategy... all
+this *bullsh\star{}t*.
+
+Usually the person who wins is the one who can talk the other one
+out. Not necessarily be right, just talk the other person out.
+
+Now in the Famous Flames Superformance Pattern, everyone is a Famous
+Flame and everyone starts off a certain generous financial
+baseline. The package differs based on seniority or whatever grade are
+in use within the organisation. Just like the Flames, there's only one
+pair of hands onto each instruments. Now turn the instruments into
+software components; the musical mistakes into software bugs and you
+have it!
+
+A system where people feel responsible for their software and don't
+waste any time arguing about it. At any given time, any software unit
+is written by one single person. No collaboration within the
+boundaries of the unit. Whether it is picked up en-route or started
+from scratch, once it is assigned to an engineer they are responsible
+for each and every line that goes in it. No one writes code but the
+author.
+
+If you write software and no bugs get reported, jackpot! You get your
+full package, hence the need for a generous baseline. People won't do
+great work for okay compensation.
+
+If a couple bugs get reported, you get to hit a sweet spot where you
+still make decent money because you wrote relatively bug free
+software.
+
+If you wrote software that caused a lot of bugs, then you get paid a
+fixed minimum amount, a depressing one, because you clearly can't
+architect software and shouldn't be protected from that fact.
+
+It's cruel and probably infeasible but this sort of incentive quickly
+rewards the actually gifted _writers_ and removes the ones that can't
+contribute good software to the organisation, effectively costing the
+business money. I emphasise "writers" because it fits a lot better
+with the idea of sole authorship, the idea of writing software with
+your own style and influences and producing +art+ work that is a
+better reflection of your abilities.
+
+For the case of people who aren't experienced yet (new hires for
+example), you can just allocate them to simpler projects or internal
+tools, and have softer bug fines. As your skills expand, you take on
+more pieces, or maybe move to another project (project transfer is
+allowed, git blame can help settle any retroactive bug).
+
+Now this obviously has flaws, the first one being that it's quite
+inhumane. The other issues to work out:
+
+- all software interacts; some sort of impartial referee needs to
+  define the interfaces between these projects to make sure they can
+  be contained yet guaranteed to cooperate when chained together;
+- bug fines would probably be decided by the same committee;
+- people would probably leave really quick;
+- you could sabotage the organisation (if software is not reviewed)
+- once again: it's inhumane.
+
+But it was fun to think about. I'm going back to addressing the
+comments on my PR.

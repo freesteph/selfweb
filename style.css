@@ -18,9 +18,11 @@ a {
 
 a:focus {
   background: yellow;
-  border: 3px solid salmon;
-  outline: none;
-  padding: 0.3rem;
+  outline: double thick green;
+}
+
+a:active {
+  outline-color: orange;
 }
 
 nav {
@@ -30,7 +32,11 @@ nav {
 }
 
 h1 {
+  display: inline-block;
+  padding: 0.5rem 0;
   line-height: 100%;
+  font-size: 180%;
+  border-bottom: 3px solid #555;
 }
 
 h2 {
@@ -80,9 +86,20 @@ blockquote {
   font-style: italic;
   font-size: 1rem;
   border-left: 2px solid #666;
+  padding: 1rem;
+  background: #EEE;
+}
+
+pre {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  font-family: monospace;
+  overflow: auto;
+  margin: 1.2em 0;
 }
 
 pre.src {
+  background: #EEE;
   overflow: unset;
   overflow-x: scroll;
   overflow-y: visible;

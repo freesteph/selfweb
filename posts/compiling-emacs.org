@@ -1,0 +1,67 @@
+#+TITLE: Compiling Emacs 27 on macOS
+* Compiling Emacs in the absence of a configurable brew version
+
+** Reasoning
+Since the Brew project have started [[https://github.com/Homebrew/homebrew-core/issues/31510][removing options]] on their core
+formulae — for reasons I am unsure of — I decided to clone the latest
+Emacs source and attempt to build from scratch on OSX in order to keep
+on using the Cocoa build and enabling ImageMagick for PDF-reading
+purposes, and also why not.
+
+This post is just a self-memo to remember how I compiled it. As I'm
+writing this I realise it's completely useless as Emacs has the handy
+~system-configuration-options~  variable built-in which describes
+exactly how you compiled it. Anyway, for reference to other Emacsen:
+
+** Installation
+This was done on my work computer, a MacBook Pro running macOS High
+Sierra version 10.13.6.
+
+1. Clone Emacs from the [[https://git.savannah.gnu.org/git/emacs.git][official repo]] or the [[https://github.com/emacs-mirror/emacs][github mirror]];
+2. This is my configure:
+
+#+BEGIN_SRC sh
+./configure \
+  --with-ns \
+  --without-dbus \
+  --with-imagemagick \
+  --disable-ns-self-contained
+#+END_SRC
+
+A quick walk through the options:
+- without-dbus :: DBus isn't shipped on macOS AFAIK;
+- with-ns :: with NextStep (ns) is our build-for-Mac ticket: I'm not
+             sure what it does apart from using the proper windowing
+             system but you probably can't build without either;
+- with-imagemagick :: compile with ImageMagick (7) support, I /think/;
+- disable-ns-self-contained :: if this is omitted, Emacs is bundled in
+     a big .app file that you can run like any normal macOS
+     application. I don't want this as I like to run an Emacs server
+     then have instances of ~emacsclient~ connecting to it on the
+     fly. Maybe there's a way to get the best of both world but I
+     couldn't figure out how.
+
+*EDIT*: I just had a look through the ~./configure --help~ and
+~--with-ns~ is automatically infered on OSX. This in turns enables the
+correct subset of options for our platform, so a lot of my initial
+options (~--without-gsettings~ and others) are automatically set. You
+can probably get away with ~./configure~ and that's it... Oh well.
+
+If the previous succeeds, move on to the usual stuff:
+
+#+BEGIN_SRC sh
+make && make install
+#+END_SRC
+
+I didn't need ~sudo~ for the install step.
+
+Enjoy the freshest Emacs!
+
+** Issues
+
+No major ones so far; I have some trouble with a weird entry in my
+~load-history~ variable (some ~(require . info)~ regexp-matching
+strangery) but I think that might just be my own.
+
+Don't hesitate to [[mailto:stephane.maniaci+blog@gmail.com][write]] if you can complement that article in any
+way. I hope it's useful.

@@ -1,0 +1,72 @@
+#+TITLE: Searching for pictures taken on a certain date with ImageMagick
+
+It's always a joy to fiddle with the command line. Past the first
+hundreds attempts, data eventually starts streaming through and if you
+save it somewhere you're sorted for life (hence this post).
+
+This small command I found for my girlfriend who was searching through a maze
+of folders for pictures of a certain date (which ended up being in the
+trash —don't ask me).
+
+The below is a lot easier than double-clicking your whole hard-drive,
+so here it goes:
+
+#+BEGIN_SRC sh
+find . \
+  -type f \
+  -name "*.JPG" \
+  -exec \
+    identify -format '%[exif:DateTimeOriginal] %i\n' '{}' \; \
+| grep "2018:06:02";
+#+END_SRC
+
+~find .~ searches in the current directory, for regular files (~-f~)
+matching a name ending in ~.JPG~ although feel free to amend this
+filter or remove it altogether. The subsequent command expects image
+files so make sure that's what you get out of your search.
+
+~exec~ passes each file (the ~'{}'~ bit) to ~identify~ which is one of
+the many utilities provided by ImageMagick. It fetches data from the
+picture and outputs information about it. Here I'm customising the
+output format to be just the date (~%[exif:DateTimeOriginal]~) and the
+full filename (~%i~).
+n
+As this point (before the last pipe) our output looks like this:
+
+#+BEGIN_SRC
+2018:05:07 20:49:16 ./DCIM/105_PANA/P1050224.JPG
+2018:05:07 09:42:03 ./DCIM/105_PANA/P1050212.JPG
+2018:06:02 13:43:26 ./DCIM/105_PANA/P1050265.JPG
+2018:06:02 13:15:23 ./DCIM/105_PANA/P1050262.JPG
+2018:05:06 11:17:39 ./DCIM/105_PANA/P1050174.JPG
+2018:06:04 18:24:53 ./DCIM/105_PANA/P1050302.JPG
+#+END_SRC
+
+Pipe this to ~grep~ and you're sorted.
+
+-----
+
+PS: and now what? well if you wanted to copy them all to some
+directory you could go like this:
+
+#+BEGIN_SRC sh
+find . \
+  -type f \
+  -name "*.JPG" \
+  -exec \
+    identify -format '%[exif:DateTimeOriginal] %i\n' '{}' \; \
+| grep "2018:06:02" \
+| awk '{ print $3 }' \
+| xargs cp -t /tmp/photos-results
+#+END_SRC
+
+Here we've added two lines, the first one to filter out the 3rd column
+of the output (~awk~ has an inherent understanding of the n-th column
+~$n~), and the last one to turn all of these lines into a
+concatenated, space-separated list of files that is fed to ~cp~ with
+the destination folder specified through an explicit switch, since it
+allows us to use the form ~cp -t DEST SOURCE1, SOURCE2, ...~ rather
+than the usual ~cp SOURCE DEST~ which wouldn't work here.
+
+By the time I'd figured it all out my girlfriend has long found her
+pictures but as always, [[https://xkcd.com/196/][there is an XKCD comic for that]].

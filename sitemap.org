@@ -1,4 +1,12 @@
 #+TITLE: Sitemap for project notes
 
-- [[file:theindex.org][Stéphane Maniaci's website]]
-- [[file:another-website-update.org][another-website-update]]
+- [[file:index.org][Home]]
+- posts
+  - [[file:posts/compiling-emacs.org][Compiling Emacs 27 on macOS]]
+  - [[file:posts/compiling-emacs-27-1-on-fedora.org][Compiling Emacs 27.1 on Fedora 32]]
+  - [[file:posts/fedora-32-docker-compose.org][Docker-compose networking in Fedora 32]]
+  - [[file:posts/fedora-32-function-keys-dell-xps-13.org][Fedora on Dell XPS 13: restoring the function keys]]
+  - [[file:posts/if-i-was-ceo.org][If I was CEO]]
+  - [[file:posts/on-software-ownership.org][On software ownership]]
+  - [[file:posts/precommit-hooks.org][Precommit hooks: get out of my way]]
+  - [[file:posts/im-pictures-date-search.org][Searching for pictures taken on a certain date with ImageMagick]]

@@ -1,0 +1,71 @@
+#+TITLE: Precommit hooks: get out of my way
+
+Javascript tooling hasn't gone extinct over the last years; it's
+flourished in a lot of our codebases as linters, formatters,
+transpilers, vulnerability-scanners, etc, etc.
+
+Which is great because it's assisted us in the difficult task of
+writing code together, with the same patterns encouraged and same
+anti-patterns removed depending on your team's configuration files.
+
+But "assisting" literally means to stand next to, aside. As soon as it
+starts leading your thinking, you're probably in the wrong place. If
+you rely on ESLint to tell you how complex your code is then you're
+slowly giving up being a good, self-evaluating programmer.
+
+-----
+
+Most projects nowadays use a git-flow-ish approach. In other words:
+the main branch is protected. And from my experience over the last 5
+years there have always been a CI bot running the tests of any
+candidate PR to be merged into the main branch. You get a couple
+reviews, and if the bot's test report is green, so are you.
+
+And that is good. A pull request is a proposal, and as any proposal
+should be formulated, not thrown over. A pull request should be the
+final form of your branch.
+
+-----
+
+The company I work at has enforced over the years running pre-commit
+hooks on most of our projects. This means before you can commit, the
+linter has to run and the unit tests have to pass. Sounds sane?
+
+I think not. Having a background process run for about 2 minutes
+between each commit is simply absurd. Why would you come nosing into
+my current history? What distrustful entity needs to check my code
+every single time I decide to save my current progress?
+
+Progress isn't done. I'm not going to spend much time on this as it
+seems rather limpid. Progress. Isn't. Done.
+
+It seems overzealous to enforce the whole adage that no commit should
+ever break master. And you know what? No commit should. But your
+feature branch isn't master. It's everyone's right to work their code
+as they want to, and it's everyone's duty to make sure the final
+history looks spotless.
+
+Git offers rebasing, amending, squashing, instant fixups for that very
+reason. So you can tailor your history as makes sense, and so that
+your code is ready for inspection once you deem it so. Trying to add
+correctness through commit hooks is invasive, and unhelpful. Adding
+some automated process every time you want to commit your history is
+like riding a bike with stabilisers all the time. You'll never learn,
+and you'll never gain speed.
+
+Please don't micro-manage code. If you have juniors or people who tend
+to do mistakes, help them uncover these mistakes themselves rather
+than dropping some process on them. If your master branch is protected
+(and it should be), they will find out anyway. But once they start
+assuming responsibility for their code they'll be more
+cautious. They'll be more critical. They'll be programmers you can
+trust rather than code-writing puppets.
+
+And they will live happily ever after, along with the ones who thrive
+on quick commit loops and uninterrupted flows to get their software
+over the line. Over & out.
+
+-----
+
+PS: if you're editing code and committing it with linting mistakes,
+get a grip and fix your editor. It's that simple.

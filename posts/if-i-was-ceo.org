@@ -1,0 +1,192 @@
+#+TITLE: If I was CEO
+
+Approaching the decade of software programming career in start-ups,
+mid-size and big companies, I sometimes wonder what would happen if I
+were to run my own entreprise, so I thought I'd write about it.
+
+The guiding principles are derived from the open-source communities
+which are still to this day the longest-lived software projects,
+benefiting from decades of world-wide attention. The fact these
+projects not only exist upon the sole will of their contributors, they
+also manage to steadily deliver despite the absence of stand-ups,
+delivery managers and commercial deadlines.
+
+-----
+
+If you think about it, isn't it a shame that the global talent pool of
+programmers is still reproducing the same old patterns over and over,
+in a constant suffering of Not Invented Here syndrome?
+
+Think about the hundreds of new website and apps being spawned every
+day having to implement some slightly divergent product features when
+it inevitably turns out that most of the project's time budget will be
+spent on implementing the same old constraints of usability,
+performance, storage, search engine performance, etc, etc.
+
+------
+
+Anyway.
+
+Part of the routine of software development is process, and this is
+how I would minimise it:
+
+
+** Stop Slacking
+
+It's called Slack for a reason. It's not meant for work
+discussions. Debating how to implement X or how to deliver Y is
+important information. It doesn't belong to a never-ending,
+infinite-scroll channel.
+
+Also no one should feel pressured to be online. Whether you're in the
+office or working remote, you don't need to be instantly engaged with
+things. Chances are (hopefully) that you're busy and focused on
+something. Or maybe you're dealing with some personal admin or
+replying to a friend, whatever. I do it regularly.
+
+Macro-managing is key: if you deliver the things you're expected to
+deliver in a respectable time then that's all there is to it. How you
+do things is your choice, people work differently and that's crucial
+in being able to work together. Screw the one-fits-all mould where
+one employee profile is the aspiration of a whole crowd of
+individuals.
+
+** Bring back email
+
+What was wrong with email?
+
+Oh wait! Email makes you accountable for what you say. Compared to a
+Slack channel where most information peacefully drowns and everyone
+can emoji their way out of a shady comment, it's a lot more
+serious. That's why a lot of email clients have a button labelled
+"Compose", not "Write whatever".
+
+You ever encountered Slack-threads-justice-warriors? The ones that
+tell you off for not starting a thread about something? Guess what:
+email had this sorted from day one. One email is called an
+email. One email plus _any_ number of replies is called... drum
+roll... an email thread.
+
+You can quote people and ask them to refine a precise part of their
+message if you have to, what else do you need? HTML emails give you
+rich content, but if you want to have a conversation then have a plain
+text correspondence. Keep it simple.
+
+Now, email is based upon a set of open protocols. Do you like
+Outlook? Apple Mail? Thunderbird? GMail with a complex system of
+filters and labels that works well for you?  Go with it. Just go with
+it. Whatever is your tool of choice, use it. Sort, tag, index,
+classify the way you want it. Colours, folders, anything. You'll find
+it ten years after if you have to, I guarantee.
+
+Last but not least: IT'S ASYNCHRONOUS. Take your time to reply. Think
+about what I said, think about what you have to say, and let me
+know. I'll do the same. Use the space to articulate your thoughts.
+
+** Do things in the open
+
+If the business can't do full-open, do internal open-source and stick
+with it. That means that even within the realm of the organisation,
+comments, issues, reviews are performed in the open. Decision-making
+can be safely retrieved and consulted at any point.
+
+It's painful to witness the amount of information (and by the way, IT
+stands for Information Technology, remind yourself once in a while)
+that get lost in private channels and behind-the-wall communications.
+
+Do things in the open. Be accountable, for better or worse. Be
+accountable, for heaven's sake. Mistakes are fine. I was once told by
+a CEO of mine that mistakes were only mistakes if we didn't learn from
+them.
+
+So don't be afraid of speaking up, and doing so honestly. At the end
+of the day, being honest is the only way to accurately improve. Which
+doesn't mean you have to be rude, or disrespectful, that is never
+okay. But don't bullshit anyone around, whether you're a graduate or a
+senior or anything. Say what you know, and stick with that.
+
+** Meetings are cover-ups
+
+Guess why start-ups don't do too many meetings? They can't afford
+them. Meetings are so obviously expensive that start-ups avoid them
+like the pest. Face-to-face is great. It's very important. Is it the
+only way to sort a problem out, or set out a vision? Absolutely not.
+
+The one thing I would micro-manage is meetings. Reading your
+text-filled slides? It's off. Have something interesting to say, but
+no one else is contributing? It's off. Your meeting is actually a
+conversation in front of other people? It's off.
+
+Need to start a broad conversation with your team or brainstorm
+something? Go for it.
+
+But do think twice before you require other people's time and
+attention. Everyone's time and attention is precious, and somehow we
+need to remind ourselves of that.
+
+** Luncheons
+
+The main difference I experienced from working in France and working
+in the UK is how we think of lunch breaks: in France they are
+sacred. You have at least an hour (if not two), and no one expect you
+to cut it off. All restaurants have lunch deals. You can go with your
+team or you can have the equally common "déjeuner d'affaires"
+(business lunch).
+
+Did you know that a lot of French workers are paid in Ticket
+Restaurant? That's right, pre-paid vouchers for food. That's how much
+it matters to us, because lunch breaks are essential to a sustained
+productivity.
+
+And, they're a great occasion to bond with people you wouldn't really
+bond with otherwise. Culture fit isn't always obvious, however having
+a meal is completely obvious. It's the most natural thing in the
+world. The word "companion" literally means [[https://en.wiktionary.org/wiki/compagnon]["someone I share my bread
+with"]].
+
+At my first ever job in Paris, the company would pay for a big
+takeaway every Friday. We'd get pizza, or Indian, or anything we voted
+our fancy that week. The gesture was nice, but what mattered more is
+that I got to talk with other engineers and share a bit of time with
+them. Talk about work and learn something, talk about life and have a
+laugh. Anything: we connected.
+
+So instead of throwing some awkward, unheard-of activities in my
+employee's faces, or leaving them no choice but to get smashed at the
+pub, I'd make sure they lunch-break and on Fridays, free lunch. Et
+voilà !
+
+** Irrevocable days off
+
+Life happens. You don't have to be sick or be on proper holiday to not
+come into work. I believe there is a growing psychological weight on
+all of us, and that the complexity of our current day can really take
+a toll on people's minds. There should be no-questions-asked days
+off. It's okay to disconnect once in a while. It's okay to say "I
+can't do it today". There's no need to lie. It's fine.
+
+** Touch-typing is required
+
+I think I would enforce a small, daily practice of touch-typing for
+anyone that didn't pass a certain standard. Once you can safely
+navigate your keys whilst focusing on the screen then you're off the
+hook.
+
+I don't understand how spending 7 hours a day on a keyboard doesn't
+prompt people to master it. It's a tool that we're forced to accept in
+our digital era, and it helps with any part of your life where you
+have to input things. Family emails, instant messaging, software
+programming, editing, anything.
+
+It doesn't have to be painful. Just practice regularly for five to
+fifteen minutes a day, and in a couple month time I have a company
+that operates on a writing bandwidth of 80 WPM (if not more). Can you
+imagine?
+
+And, it's much better for your health so I would definitely enforce it.
+
+-----
+
+This ended up being a brain dump more than anything else, but if I was
+to start something, this is the sort of policies I'd be willing to
+implement. I cannot wait to revisit this post when it actually happens.
