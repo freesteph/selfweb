@@ -1,0 +1,61 @@
+#+TITLE: Compiling Emacs 29.2 on mac OS
+#+DATE: <2024-01-20 Sat>
+
+[[https://lists.gnu.org/archive/html/emacs-devel/2024-01/msg00666.html][Emacs 29.2 has just been released]], and it's also been a breeze to
+install on my machine. Here's what I did, in case it helps anyone
+else:
+
+** Getting the release
+
+#+begin_src shell
+cd ~/Downloads # or any folder of your choice
+curl -L -O https://ftpmirror.gnu.org/emacs/emacs-29.2.tar.xz
+tar xf emacs-29.2.tar.xz && cd emacs-29.2
+#+end_src
+
+** Configuring
+
+I use a local folder as my ~$DEV_PREFIX~ (happens to be ~/build/os~)
+but you can just omit the prefix arg if you don't use a custom one.
+
+#+begin_src shell
+./configure --prefix=$DEV_PREFIX \
+            --with-xwidgets \
+            --disable-ns-self-contained \
+            --with-json \
+            --with-tree-sitter
+#+end_src
+
+The other switches are the features I care about:
+
+- ~with-xwidgets~: XWidgets allows embedding actual display bits into
+  your Emacs GUI frames (like a graphical web browser) ;
+- ~disable-ns-self-contained~: I like launching Emacs from the
+  command-line, or using the daemon. I don't want the "all-in-one mac
+  OS app bundle" version ;
+- ~with-json~: this compiles the much faster, native JSON support
+  (through ~libjansson~ IIRC) ;
+- ~with-tree-sitter~: [[https://tree-sitter.github.io/tree-sitter/][Tree-sitter]] is a great new tool that does
+  source parsing better than most things before it. A lot of Emacs
+  modes can already benefit from it.
+
+** Compiling & installing
+
+If the ~./configure~ step succeeds, go ahead and run:
+
+#+begin_src shell
+gmake -j8 && gmake install
+#+end_src
+
+The ~-j8~ says to uses 8 jobs to go faster and generate some much
+appreciated heat in this freezing cold season.
+
+If you're a mature kind of person you'll probably want to try before
+you install: run ~./src/emacs~ right after ~gmake~. If you like life
+on the edge, install straight away.
+
+** Getting back to work
+
+If all of this succeeds (you can [[mailto:stephane-dot-maniaci-at-gmail-dot-com][write if it doesn't work]]) you should
+be able to run Emacs with a bare ~emacs~ in your favourite
+terminal. Have fun!

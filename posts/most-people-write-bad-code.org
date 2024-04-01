@@ -1,0 +1,74 @@
+#+TITLE: Most people write bad code
+#+DATE: <2024-04-01 Mon>
+
+The more code I read the more I realise the majority of programmers
+write awful code. I say awful because an inherent law of programming
+is that ~bad code + time = awful code~.
+
+And everywhere I dig I find people who just solved the problem and
+then f***** off. Let me tell you something kids.
+
+It's not over when you solved it. That's the easy part. You write some
+tests (if you do, still an option for most people apparently) then
+you solve the damn thing, easy.
+
+What's important is the part after. That's refactoring, editing,
+rewording, going for a coffee because it's not exactly right and you
+can't put your finger on what makes it not exactly right, and then
+refactoring, editing and rewording again until it's *just* right.
+
+The person who will look at it later – even if sometimes it might just
+be you and you only – must go "oh yeah, right, obviously" and
+understand straight away what you encapsulated, what you solved with
+such delightful verse of limpid instructions. It needs to be bright
+without ever being smart.
+
+Now, let me tell you something else. Most of my code doesn't do
+that. I tried, but then I come back to it months later and I find it
+slightly off. I'm starting to find that experience, Experience with a
+big ole' capital E, is a slow dripper, and that it's only in those
+subtle perspective shifts that I find myself growing up.
+
+The way I write tests has changed, the way I define interfaces has
+changed, my use of functional programming has changed, all the tools
+in my humble programmer toolbox are slowly adapting to the test of
+time, and it's actually really exciting. I still enjoy programming
+with the same passion, and I'm glad that my set of rules and tools is
+evolving with it.
+
+But I'm still nowhere close, I know that. There are so many things I
+don't grasp, and so little I master – such is the crude reality of a
+technology that relies on hundreds of layers to get information
+across.
+
+But one thing has not changed though: I try. I still try, despite the
+new requirements, despite the ever-changing rules, despite the new
+frameworks, despite the pressing bugs, despite the this and that, I
+still try and write code that will make everyone struggle a bit less
+that if I didn't try.
+
+Let me throw in a couple famous quotes to bring down the value of this
+article:
+
+CODE IS ALSO
+
+#+begin_quote
+"Good design is obvious. Great design is transparent." – Joe Sparano.
+#+end_quote
+
+SOMETHING THAT
+
+#+begin_quote
+"Simplicity is the ultimate sophistication." – Leonardo da Vinci.
+#+end_quote
+
+MUST BE
+
+#+begin_quote
+"Design is the intermediary between information and understanding." -
+Hans Hofmann
+#+end_quote
+
+DESIGNED WELL.
+
+Rant over.

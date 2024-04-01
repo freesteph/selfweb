@@ -1,0 +1,33 @@
+#+TITLE: Snoozing git branches: a naming strategy
+#+DATE: <2024-01-09 Tue>
+
+I rely on Git a lot to get my work done and organise the work that I
+can't actually get to "done".
+
+I sometimes have proof-of-concept code that I just don't want to
+throw away, things that can't be prioritised now but will make
+excellent candidates for rainy-days-refactors or good guidance when
+the feature/thing is actually needed.
+
+These bits of code will usually end up in branches, out-of-date but
+rebaseable branches, but will pollute my git-branch listing.
+
+The solution I've found is fairly simple and cute, so I thought I'd
+share it here: prefix your branch name with ~zzz/~. It equally
+leverages the fact that ~git branch~ is sorted alphabetically and also
+indicates the work is snoozed. Smart, uh?
+
+#+BEGIN_SRC
+14:05 ~/build/betagouv/aplypro £  git branch
+  admin
+  deploy/prod
+  main
+​* payments/main
+  payments/mark-ready-job
+  payments/server
+  ruby/3.3
+  zzz/better-da
+  zzz/refactor-mappers
+  zzz/screencasts
+  zzz/smoke-tests
+#+END_SRC
