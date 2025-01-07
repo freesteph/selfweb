@@ -13,3 +13,4 @@
   - [[file:posts/snoozing-git-branches.org][Snoozing git branches: a naming strategy]]
   - [[file:posts/compiling-emacs-29.2-on-osx.org][Compiling Emacs 29.2 on mac OS]]
   - [[file:posts/most-people-write-bad-code.org][Most people write bad code]]
+  - [[file:posts/local-gem-development-with-docker.org][Using local gems within a Docker-Compose setup]]

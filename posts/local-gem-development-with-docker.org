@@ -1,0 +1,51 @@
+#+TITLE: Using local gems within a Docker-Compose setup
+#+DATE: <2025-01-07 Tue>
+
+I use Docker for most of my code which is awesome, but as always
+sharing things between the host/container can be tricky. For instance,
+sometimes I want to use a local gem in some app:
+
+#+begin_src ruby
+gem "rails", path: "../my-own/rails"
+#+end_src
+
+This would work locally but this will obviously not work within
+Docker, because at build time (when ~bundle [install]~ is ran) the
+volumes are not mounted.
+
+Here's a semi-gross but powerful hack:
+
+1. build your image ;
+
+2. log into your container and print the path of the gem:
+
+  #+begin_src sh
+  docker-compose run --rm your-container sh
+
+  root@58153cf221f2:/app# bundle info rails --path
+  /usr/local/bundle/gems/rails-8.0.1
+  #+end_src
+
+3. now hack that path into your compose setup:
+
+  #+begin_src yaml
+  services:
+    web:
+      # [...]
+      volumes:
+        - "../my-own/rails:/usr/local/bundle/gems/rails-8.0.1"
+  #+end_src
+
+Et voilà, you're good to go and hack away.
+
+PS: note that Rails is actually a special case because it hosts a bunch of
+sub-gems (action-X, railties) so you'll have to go one level deeper to
+make it work:
+
+#+begin_src yaml
+services:
+  web:
+    # [...]
+    volumes:
+      - "../my-own/rails/railties:/usr/local/bundle/gems/railties-8.0.1"
+#+end_src
